@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BcryptPassGenerator - MoonStudio</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Custom Tailwind -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-fondo: #0f172a;
+        --color-fondo-card: #1e293b;
+        --color-primario: #3b82f6;
+        --color-texto-principal: #e2e8f0;
+        --color-texto-secundario: #94a3b8;
+        --color-exito: #22c55e;
+
+        --font-orbitron: "Orbitron", sans-serif;
+        --font-exo: "Exo 2", sans-serif;
+      }
+    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="bg-[var(--color-fondo)] text-[var(--color-texto-principal)] font-[var(--font-exo)] min-h-screen flex flex-col">
+    <!-- Contenido principal -->
+    <main class="flex-1 flex items-center justify-center">
+      <div class="bg-[var(--color-fondo-card)] p-8 rounded-2xl shadow-lg max-w-md w-full flex flex-col gap-6 m-6">
+        <!-- Título -->
+        <h1 class="text-2xl font-bold text-center font-[var(--font-orbitron)]">BcryptPassGenerator</h1>
+
+        <!-- Contenedor Inputs -->
+        <div class="flex gap-4">
+          <!-- Input contraseña -->
+          <div class="relative flex-1">
+            <input
+              id="passwordInput"
+              type="password"
+              placeholder="Escribe la contraseña..."
+              class="w-full p-4 pr-14 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)]" />
+            <!-- Botón mostrar/ocultar contraseña -->
+            <button id="togglePassword" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-texto-secundario)] hover:text-[var(--color-primario)]">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+
+          <!-- Input salt rounds -->
+          <div class="w-24">
+            <input
+              id="saltRoundsInput"
+              type="number"
+              min="4"
+              max="20"
+              value="10"
+              class="w-full p-4 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)] text-center no-spinner" />
+          </div>
+        </div>
+
+        <!-- Hash generado -->
+        <div>
+          <label for="hashOutput" class="mb-2 block text-sm text-[var(--color-texto-secundario)]">Hash Generado</label>
+          <textarea
+            id="hashOutput"
+            readonly
+            rows="4"
+            class="w-full p-3 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] resize-none focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)]"></textarea>
+        </div>
+
+        <!-- Botón copiar -->
+        <button
+          id="copyHash"
+          class="bg-[var(--color-primario)] text-[var(--color-fondo)] font-bold py-3 rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+          <i class="fa-solid fa-copy"></i>
+          Copiar Hash
+        </button>
+
+        <!-- Toast de copiado -->
+        <div id="toastCopied" class="toast-success hidden absolute top-6 right-6 z-50">¡Copiado!</div>
+      </div>
+    </main>
+
+    <!-- Footer fijo -->
+    <footer class="bg-[var(--color-fondo-card)] w-full py-4 text-center text-xs text-[var(--color-texto-secundario)]">
+      <div>
+        <p>Hecho en Ecuador 💛💙❤️</p>
+        <p>Desarrollado por <span class="font-bold text-[var(--color-primario)]">MoonStudio</span></p>
+      </div>
+    </footer>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/d69c31f99a.js" crossorigin="anonymous"></script>
+    <!-- BcryptJS -->
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
