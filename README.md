@@ -10,7 +10,7 @@ Pensado para desarrolladores que necesitan generar contraseñas hasheadas para i
 ## 🚀 Tecnologías utilizadas
 
 - **HTML5** + **CSS3** + **TailwindCSS v4.1** (CDN `@tailwindcss/browser`)
-- **JavaScript** puro (sin frameworks pesados)
+- **JavaScript** (Vanilla)
 - **bcryptjs** vía CDN (`bcryptjs@2.4.3`)
 - **FontAwesome** para iconografía
 
@@ -39,25 +39,24 @@ cd BcryptPassGenerator
 Luego abre el `index.html` directamente.
 
 ✅ **No necesitas servidor backend**.  
-✅ **Listo para producción** (ideal para publicar en Netlify, Vercel, GitHub Pages, etc).
 
 ---
 
 ## 🌐 Demo en línea
 
-👉 [Acceder al Generador Online (enlace a Netlify o GitHub Pages)](https://tudominio.netlify.app)
+👉 [Acceder al Generador Online (enlace a Netlify o GitHub Pages)](https://bcryptpassgenerator.netlify.app/)
 
 ---
 
 ## 📸 Captura de pantalla
 
-![BcryptPassGenerator Screenshot](ruta/a/la/captura.png)
+![BcryptPassGenerator Screenshot](images/captura.png)
 
 ---
 
 ## 🤝 Créditos
 
-Desarrollado con 💙 por [MoonStudio](https://moonstudio.example)
+Desarrollado por [MoonStudio](https://moonstudio.example)
 
 ---
 
