@@ -59,7 +59,9 @@
               placeholder="Rounds"
               class="w-full p-4 pr-10 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)] text-center no-spinner" />
 
-            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-primario)] cursor-pointer" title="Número de rondas bcrypt. Mientras mas alto, mas seguro, pero más lento (default 10)">
+            <span
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-primario)] cursor-pointer"
+              title="Número de rondas bcrypt. Mientras mas alto, mas seguro, pero más lento (default 10)">
               <i class="fa-solid fa-circle-info"></i>
             </span>
           </div>
@@ -75,13 +77,24 @@
             class="w-full p-3 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] resize-none focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)]"></textarea>
         </div>
 
-        <!-- Botón copiar -->
-        <button
-          id="copyHash"
-          class="bg-[var(--color-primario)] text-[var(--color-fondo)] font-bold py-3 rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
-          <i class="fa-solid fa-copy"></i>
-          Copiar Hash
-        </button>
+        <!-- Botones -->
+        <div class="flex gap-3">
+          <!-- Botón copiar -->
+          <button
+            id="copyHash"
+            class="flex-1 bg-[var(--color-primario)] text-[var(--color-fondo)] font-bold py-3 rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-copy"></i>
+            Copiar Hash
+          </button>
+
+          <!-- Botón reset -->
+          <button
+            id="resetForm"
+            class="w-12 bg-[var(--color-fondo)] border border-[var(--color-primario)] text-[var(--color-primario)] rounded-lg hover:bg-[var(--color-primario)] hover:text-[var(--color-fondo)] transition-all flex items-center justify-center"
+            title="Resetear formulario">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
 
         <!-- Toast de copiado -->
         <div id="toastCopied" class="toast-success hidden absolute top-6 right-6 z-50">¡Copiado!</div>

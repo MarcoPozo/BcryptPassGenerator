@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const togglePassword = document.getElementById("togglePassword");
   const copyHash = document.getElementById("copyHash");
   const toastCopied = document.getElementById("toastCopied");
+  const resetForm = document.getElementById("resetForm");
 
   // Mostrar/Ocultar contraseña
   togglePassword.addEventListener("click", () => {
@@ -83,4 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
       toastCopied.classList.add("hidden");
     }, 2000);
   }
+
+  // Resetear el formulario
+  resetForm.addEventListener("click", () => {
+    passwordInput.value = "";
+    saltRoundsInput.value = 10;
+    hashOutput.value = "";
+  });
 });
