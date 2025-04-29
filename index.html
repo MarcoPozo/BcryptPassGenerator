@@ -40,7 +40,7 @@
             <input
               id="passwordInput"
               type="password"
-              placeholder="Escribe la contraseña..."
+              placeholder="Contraseña"
               class="w-full p-4 pr-14 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)]" />
             <!-- Botón mostrar/ocultar contraseña -->
             <button id="togglePassword" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-texto-secundario)] hover:text-[var(--color-primario)]">
@@ -49,14 +49,19 @@
           </div>
 
           <!-- Input salt rounds -->
-          <div class="w-24">
+          <div class="relative w-24">
             <input
               id="saltRoundsInput"
               type="number"
               min="4"
               max="20"
               value="10"
-              class="w-full p-4 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)] text-center no-spinner" />
+              placeholder="Rounds"
+              class="w-full p-4 pr-10 rounded-lg bg-[var(--color-fondo)] border border-[var(--color-texto-secundario)] text-[var(--color-texto-principal)] placeholder-[var(--color-texto-secundario)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primario)] text-center no-spinner" />
+
+            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-primario)] cursor-pointer" title="Número de rondas bcrypt. Mientras mas alto, mas seguro, pero más lento (default 10)">
+              <i class="fa-solid fa-circle-info"></i>
+            </span>
           </div>
         </div>
 
