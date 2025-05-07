@@ -44,7 +44,7 @@ Luego abre el `index.html` directamente.
 
 ## 🌐 Demo en línea
 
-👉 [Acceder al Generador Online (enlace a Netlify o GitHub Pages)](https://bcryptpassgenerator.netlify.app/)
+👉 [Acceder al Generador Online](https://bcryptpassgenerator.netlify.app/)
 
 ---
 
